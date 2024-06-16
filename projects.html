@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Your Name">
+    <meta name="description" content="Projects page of Narek Arabian's portfolio website.">
+    <title>Projects - Narek Arabian's Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="Logo.png" alt="Logo">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="action-buttons">
+            <button onclick="location.href='contact.html'">Get in Touch</button>
+            <button onclick="location.href='resume.pdf'">Download Resume</button>
+        </div>
+    </header>
+    <main>
+        <section>
+            <h1>Projects</h1>
+            <article>
+                <img src="risk.png" alt="Project 1">
+                <p>Created a digital version of Risk: Game of Global Domination using Java. Worked in a team of three to accomplish the goal using different functions and techniques like Inheritance and Interface.</p>
+                <p>Uploaded the result on Github.</p>
+            </article>
+            <article>
+                <img src="chess.png" alt="Project 2">
+                <p>Created a digital version of Chess using Java. Worked alone across multiple months to accomplish the goal using different functions and techniques like Inheritance and Interface.</p>
+                <p>Uploaded the result on Github.</p>
+            </article>
+        </section>
+    </main>
+    <footer>
+        <p>Contact me at <a href="#" onclick="copyEmail()">narekarabian04@gmail.com</a> or <a href="#" onclick="copyPhone()">+374 94 146556</a></p>
+
+        <!-- JavaScript to copy email and phone number to clipboard -->
+        <script>
+            function copyEmail() {
+                // Email to be copied
+                const email = "narekarabian04@gmail.com";
+    
+                // Copy email to clipboard using navigator.clipboard API
+                navigator.clipboard.writeText(email)
+                    .then(() => {
+                        alert("Email copied to clipboard!");
+                    })
+                    .catch(err => {
+                        console.error("Failed to copy email: ", err);
+                    });
+    
+                // Prevent default action of the link
+                return false;
+            }
+    
+            function copyPhone() {
+                // Phone number to be copied
+                const phone = "+374 94 146556";
+    
+                // Copy phone number to clipboard using navigator.clipboard API
+                navigator.clipboard.writeText(phone)
+                    .then(() => {
+                        alert("Phone number copied to clipboard!");
+                    })
+                    .catch(err => {
+                        console.error("Failed to copy phone number: ", err);
+                    });
+    
+                // Prevent default action of the link
+                return false;
+            }
+        </script>
+        <address>
+            Verin Antaraying 146/1
+        </address>
+    </footer>
+</body>
+</html>
