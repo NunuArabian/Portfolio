@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Narek Arabian">
+    <meta name="description" content="About page of Narek Arabian's portfolio website.">
+    <title>About - Narek Arabian's Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="Logo.png" alt="Logo">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="action-buttons">
+            <button onclick="location.href='contact.html'">Get in Touch</button>
+            <button onclick="location.href='resume.pdf'">Download Resume</button>
+        </div>
+    </header>
+    <main>
+        <section>
+            <h1>About Me</h1>
+            <article>
+                <img src="Narek.png" alt="Your Photo" height="500" width="400">
+               
+            </article>
+        </section>
+        <section>
+            <h2>My Background</h2>
+            <p>I was born in the United States, after which me and my family moved to Armenia. I've been living there ever since.</p>
+        </section>
+        <section>
+            <h2>Education</h2>
+            <p>I graduated from the school Anania Shirakatsy Lyceum, and am currently majoring in Computer Science at <abbr title="American University of Armenia">AUA.</abbr></p>
+        </section>
+        <section>
+            <h2>Experience</h2>
+            <p>I interned at <a href="https://www.instigaterobotics.com/" target=_blank>Instigate Robotics</a> for a year, afterwards I worked as a waiter part time</p>
+        </section>
+        <section>
+            <h2>Hobbies</h2>
+            <p></p>
+        </section>
+        <address>
+            <li>Hiking</li>
+            <li>Playing guitar</li>
+            <li>Playing videogames</li>
+            <li>Hanging out with friends</li>
+        </address>
+    </main>
+    <footer>
+        <p>Contact me at <a href="#" onclick="copyEmail()">narekarabian04@gmail.com</a> or <a href="#" onclick="copyPhone()">+374 94 146556</a></p>
+
+        <!-- JavaScript to copy email and phone number to clipboard -->
+        <script>
+            function copyEmail() {
+                // Email to be copied
+                const email = "narekarabian04@gmail.com";
+    
+                // Copy email to clipboard using navigator.clipboard API
+                navigator.clipboard.writeText(email)
+                    .then(() => {
+                        alert("Email copied to clipboard!");
+                    })
+                    .catch(err => {
+                        console.error("Failed to copy email: ", err);
+                    });
+    
+                // Prevent default action of the link
+                return false;
+            }
+    
+            function copyPhone() {
+                // Phone number to be copied
+                const phone = "+374 94 146556";
+    
+                // Copy phone number to clipboard using navigator.clipboard API
+                navigator.clipboard.writeText(phone)
+                    .then(() => {
+                        alert("Phone number copied to clipboard!");
+                    })
+                    .catch(err => {
+                        console.error("Failed to copy phone number: ", err);
+                    });
+    
+                // Prevent default action of the link
+                return false;
+            }
+        </script>
+        <address>
+            Verin Antaraying 146/1
+        </address>
+</body>
+</html>
